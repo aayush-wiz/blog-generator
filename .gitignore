@@ -1,0 +1,15 @@
+# Python virtual environments
+venv/
+backend/venv/
+
+# macOS
+.DS_Store
+
+# Environment variables
+.env
+backend/.env
+frontend/.env
+
+# Editor files
+.vscode/
+.idea/ 
