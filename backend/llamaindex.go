@@ -7,21 +7,6 @@ import (
 	"os/exec"
 )
 
-// LlamaIndexRequest represents the data sent to the Python LlamaIndex script
-type LlamaIndexRequest struct {
-	Topic    string           `json:"topic"`
-	Contents []ScrapedContent `json:"contents"`
-}
-
-// LlamaIndexResponse represents the response from the Python LlamaIndex script
-type LlamaIndexResponse struct {
-	Title         string        `json:"title"`
-	Content       []BlogContent `json:"content"`
-	FeaturedImage string        `json:"featuredImage"`
-	Tags          []string      `json:"tags"`
-	Summary       string        `json:"summary"`
-}
-
 // GenerateBlogWithLlamaIndex calls the Python script that implements LlamaIndex to generate a blog
 func GenerateBlogWithLlamaIndex(topic string, contents []ScrapedContent) (LlamaIndexResponse, error) {
 	var response LlamaIndexResponse
